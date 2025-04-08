@@ -37,6 +37,7 @@ public class Welcome {
 
     private void login() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter email");
         String email = sc.nextLine();
         try{
             if (UserDAO.isExists(email)){
@@ -45,7 +46,8 @@ public class Welcome {
                 System.out.println("Enter the otp");
                 String otp = sc.nextLine();
                 if(otp.equals(genOTP)){
-                    System.out.println("Welcome");
+                    new UserView(email).home();
+
                 }
                 else{
                     System.out.println("Wrong otp");

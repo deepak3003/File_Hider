@@ -6,6 +6,12 @@ public class Data {
     private  String path;
     private  String email;
 
+    public Data(int id, String fileName, String path) {
+        this.id = id;
+        this.fileName = fileName;
+        this.path = path;
+    }
+
     public int getId() {
         return id;
     }
